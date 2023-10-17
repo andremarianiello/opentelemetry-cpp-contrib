@@ -30,9 +30,10 @@ ExternalProject_Add(project_nginx
   CONFIGURE_COMMAND ./configure ${NGINX_CONFIGURE_ARGS}
   BUILD_COMMAND ""
   INSTALL_COMMAND ""
+  DOWNLOAD_EXTRACT_TIMESTAMP FALSE
 )
 
-set(NGINX_DIR "${CMAKE_BINARY_DIR}/nginx/src/project_nginx")
+set(NGINX_DIR "${PROJECT_BINARY_DIR}/nginx/src/project_nginx")
 
 set(NGINX_INCLUDE_DIRS
   ${NGINX_DIR}/objs
